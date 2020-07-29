@@ -15,7 +15,7 @@ public class CarController : MonoBehaviour
     public Transform frontDriverT, frontPassengerT;
     public Transform rearDriverT, rearPassengerT;
 
-    public float maxSteeringAngle = 50;
+    public float maxSteeringAngle = 45;
     public float motorForce = 50;
 
     public void GetInput()
@@ -39,10 +39,10 @@ public class CarController : MonoBehaviour
 
     private void UpdateWheelPoses()
     {
+        UpdateWheelPose(rearDriverWheel, rearDriverT);
         UpdateWheelPose(frontPassengerWheel, frontPassengerT);
         UpdateWheelPose(frontDriverWheel, frontDriverT);
         UpdateWheelPose(rearPassengerWheel, rearPassengerT);
-        UpdateWheelPose(rearDriverWheel, rearDriverT);
     }
     private void UpdateWheelPose(WheelCollider _collider, Transform _transform)
     {
@@ -50,6 +50,9 @@ public class CarController : MonoBehaviour
         Quaternion quat = _transform.rotation;
 
         _collider.GetWorldPose(out pos, out quat);
+
+        _transform.position = pos;
+        _transform.rotation = quat;
     }
 
     void Start()
