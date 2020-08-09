@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Vehicle Physics Pro/Scenes/Getting Started - Sport Coupe.unity
+    guid: 8d70fcb2877583e4ea4a59d9c1728acd
+  - enabled: 1
+    path: Assets/LobbyMenuScene.unity
+    guid: ee3365a3d21bc2444b986e5df83026ce
+  - enabled: 1
+    path: Assets/MultiplayerScene.unity
+    guid: 89829242e15347b41aaf7ac035715e82
   m_configObjects: {}

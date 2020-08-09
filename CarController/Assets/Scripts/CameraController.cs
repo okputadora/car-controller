@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform objectToFollow;
-    public Vector3 offset;
+    public Vector3 offset = new Vector3(0, 2, -7);
 
     public float lookSpeed = 10;
     public float followSpeed = 10;
